@@ -2,6 +2,8 @@ var http = require('http');
 var router = require('router');
 var request = require('request');
 var key = "";
+
+
 var event_manager_url = 'http://merx-pbx-gateway-event-manager.herokuapp.com';
 
 var route = router();
@@ -30,3 +32,4 @@ route.get("/call/inbound/{status}/{user_id}/{cid}", function (req, res) {
 });
 
 http.createServer(route).listen(8080);
+console.log("The process is running...");

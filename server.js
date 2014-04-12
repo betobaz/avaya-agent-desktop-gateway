@@ -6,9 +6,10 @@ var event_manager_url = 'http://merx-pbx-gateway-event-manager.herokuapp.com';
 
 var route = router();
 // Configure our HTTP server to respond with Hello World the root request
-route.get("/{user_id}/{cid}", function (req, res) {
+route.get("/call/inbound/{status}/{user_id}/{cid}", function (req, res) {
   var user_id = req.params.user_id;
   var cid = req.params.cid;
+  var status = req.params.status;
 
   res.writeHead(200); 
   res.end("Success");

@@ -12,7 +12,7 @@ route.get("/call/inbound/{status}/{user_id}/{cid}", function (req, res) {
   var status = req.params.status;
 
   res.writeHead(200); 
-  res.end("<scrip>window.close();</script>");
+  res.end("<script>window.close();</script>");
 
   request({
     method: 'GET',
